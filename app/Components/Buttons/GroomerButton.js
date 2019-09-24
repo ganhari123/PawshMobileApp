@@ -10,10 +10,22 @@ import {
 const { height, width } = Dimensions.get('window');
 
 export class GroomerButton extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.handlePress = this.handlePress.bind(this)
+    }
+
+    handlePress(e) {
+        if (typeof this.props.onPress === 'function') {
+            this.props.onPress()
+        }
+    }
+
     render() {
         return (
             <View style={styles.groomerContainer}>
-              <TouchableOpacity style={styles.groomerButton}>
+              <TouchableOpacity onPress={this.handlePress} style={styles.groomerButton}>
                   <Text style={styles.groomerButtonText}> {this.props.buttonText} </Text>
               </TouchableOpacity>
             </View>
