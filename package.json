@@ -12,6 +12,7 @@
     "lodash": "^4.17.15",
     "react": "16.8.6",
     "react-native": "0.60.5",
+    "react-native-check-box": "^2.1.7",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-keyboard-aware-scroll-view": "^0.9.1",
     "react-native-web-swiper": "^2.0.5",
