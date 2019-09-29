@@ -43,9 +43,12 @@ export class SignIn extends React.Component {
             console.log(email)
             console.log(password)
             loginRequest(email, password).then(function(jsonResp) {
+                this.setState({spinner: false})
+                console.log(jsonResp)
                 if (jsonResp.Success) {
-                    this.setState({spinner: false})
                     this.props.navigation.navigate('DashboardRT')
+                } else if (jsonResp.Error === 'User is not verified yet') {
+                    this.props.navigation.navigate('VerifyRT', {email: this.state.email})
                 }
             }.bind(this))
         }

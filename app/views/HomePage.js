@@ -63,7 +63,7 @@ export class HomePage extends React.Component {
               <TouchableOpacity style={buttonStyle.signButton} onPress={() => this.props.navigation.navigate('LoginRT')}>
                   <Text style={{color: '#3BC8CA'}}>Sign in</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={buttonStyle.signButton}>
+              <TouchableOpacity style={buttonStyle.signButton} onPress={() => this.props.navigation.navigate('SignupRT')}>
                   <Text style={{color: '#3BC8CA'}}>Sign up</Text>
               </TouchableOpacity>
             </View>
