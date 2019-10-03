@@ -1,4 +1,4 @@
-const url = "http://10.0.0.205:8080"
+const url = "http://10.0.0.207:8080"
 
 function loginRequest(email, password) {
     fullURL = url + '/login'
